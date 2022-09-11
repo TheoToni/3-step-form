@@ -7,12 +7,12 @@ function App() {
 
   function formHandlerNext() {
     setStep((oldvalue) => {
-      return oldvalue + 1;
+      if (oldvalue < 2) return oldvalue + 1;
     });
   }
   function formHandlerBefore() {
     setStep((oldvalue) => {
-      return oldvalue + -1;
+      if (oldvalue >= 0) return oldvalue + -1;
     });
   }
   return (
@@ -35,6 +35,12 @@ function App() {
             onClick={formHandlerBefore}
             className="arrowButtonLeft"
           ></button>
+        </div>
+      )}
+      {step == 2 && (
+        <div className="end">
+          <h2>Thank you for signing UP</h2>
+          <p>This is just a demo for learning purpose.</p>
         </div>
       )}
       <p className="info">Created by THEO.JS</p>
