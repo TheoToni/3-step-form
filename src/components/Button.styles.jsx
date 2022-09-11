@@ -1,21 +1,33 @@
 import styled from "styled-components";
 
 export const StyledButton = styled.button`
-  background-image: linear-gradient(
-    to right,
-    #ff512f 0%,
-    #f09819 51%,
-    #ff512f 100%
-  );
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
+  background: linear-gradient(to left, #e85636 50%, #fd6234 50%) right;
+  font-family: "Abel", sans-serif;
+  background-size: 200% 100%;
+  border: none;
   color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-  outline: none;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+
+  transition: 1s;
+  &:hover {
+    background-position: left;
+    padding: 10px 330px;
+
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    &:hover {
+      padding: 10px 150px;
+    }
+  }
+`;
+
+export const NormalButton = styled(StyledButton)`
+  border-radius: 0;
+  padding: 15px 40px;
 `;

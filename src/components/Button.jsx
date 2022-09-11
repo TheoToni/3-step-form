@@ -1,3 +1,4 @@
-import { StyledButton } from "./Button.styles";
+import { StyledButton, NormalButton } from "./Button.styles";
 
 export default StyledButton;
+export { NormalButton };

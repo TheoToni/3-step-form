@@ -26,3 +26,97 @@ body {
   background-size: cover;
   background-position: bottom center;
 }
+h1 {
+  font-size: 56px;
+  line-height: normal;
+}
+input {
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  margin: 10px;
+  padding: 10px 10px;
+  font-size: 18px;
+  font-family: "Abel", sans-serif;
+}
+input:focus {
+  border-bottom: 2px solid #fb3a02;
+}
+label {
+  font-size: 20px;
+}
+input::placeholder {
+  color: white;
+  font-size: 15px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  animation: fadeIn 2s 1;
+  padding: 0 120px;
+}
+
+.arrowButton {
+  position: relative;
+  background-image: url("./assets/arrow.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  margin-top: 40px;
+  animation: anim 1s infinite;
+  animation-direction: alternate;
+  left: 240px;
+}
+
+@keyframes anim {
+  0% {
+    left: 240px;
+  }
+  100% {
+    left: 260px;
+  }
+}
+.arrowButton:hover {
+  cursor: pointer;
+}
+
+.arrowButtonLeft {
+  position: relative;
+  background-image: url("./assets/arrowLeft.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  padding: 20px;
+  margin-top: 40px;
+  animation: animLeft 1s infinite;
+  animation-direction: alternate;
+  left: -80px;
+  bottom: 80px;
+}
+
+@keyframes animLeft {
+  0% {
+    left: -80px;
+  }
+  100% {
+    left: -100px;
+  }
+}
+.arrowButton:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+.info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
